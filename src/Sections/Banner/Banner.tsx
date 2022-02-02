@@ -29,14 +29,14 @@ export default function Banner({}: Ibanner) {
             paddingRight: "0px",
             paddingLeft: "40px",
           }}
-          className="pt-5 ">
+          className="">
           <Row className="align-items-center">
             <Col lg={6}>
               <motion.div
                 initial={{ x: "-2vw" }}
                 animate={{ x: 0 }}
                 transition={{
-                  type: "just",
+                  // type: "just",
                   duration: 2,
                 }}>
                 <p
@@ -53,7 +53,7 @@ export default function Banner({}: Ibanner) {
                 initial={{ x: "2vw" }}
                 animate={{ x: 0 }}
                 transition={{
-                  type: "just",
+                  // type: "just",
                   duration: 1.5,
                 }}>
                 {" "}
@@ -68,7 +68,7 @@ export default function Banner({}: Ibanner) {
                 initial={{ y: "2vw" }}
                 animate={{ y: 0 }}
                 transition={{
-                  type: "just",
+                  // type: "just",
                   duration: 2,
                 }}>
                 <div className="pt-4">
@@ -86,12 +86,12 @@ export default function Banner({}: Ibanner) {
                 initial={{ x: "3vw" }}
                 animate={{ x: 0 }}
                 transition={{
-                  type: "just",
+                  // type: "just",
                   duration: 2,
                 }}>
                 <img
                   src={graphic}
-                  style={{ maxWidth: "75%", marginRight: "-40px" }}
+                  style={{ maxWidth: "75%", marginRight: "" }}
                 />
               </motion.div>
             </Col>

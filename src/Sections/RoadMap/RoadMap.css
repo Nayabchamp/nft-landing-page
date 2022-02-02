@@ -52,7 +52,7 @@
 }
 @media (min-width: 1170px) {
   .vertical-timeline::before {
-    height: 115.5%;
+    height: 100%;
     width: 2px;
     background: var(--line-color);
     z-index: -1;

@@ -5,10 +5,11 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import Text from "../Text/Text";
+
 import "./RoadMap.css";
 import MediaQuery from "react-responsive";
 import { THEME } from "../../const";
+import Text from "../../Components/Text/Text";
 const timelineList = [
   {
     title: "New Year's Eve 2021",
@@ -40,14 +41,24 @@ const timelineList = [
       </>
     ),
   },
+  {
+    title: "Mid 2022",
+    text: (
+      <>
+        On 12/31 (New Year's Eve 2021), we will drop the LinksDAO Membership
+        NFTs. These NFTs will allow for community access, governance, a wide
+        variety of perks, and games in the near term.
+      </>
+    ),
+  },
 ];
 export default function RoadMap() {
   return (
-    <div className="mt-5  mb-5 pb-5">
+    <div className="mt-5  mb-5 pb-5" id="roadmap">
       <div className="pt-5 ">
         <MediaQuery maxWidth={1168}>
           <div style={{ paddingLeft: "10vh", marginBottom: "-1.5vh" }}>
-            <Text color={THEME.PRIMARY} text="Roadmap" />
+            <Text color={THEME.WHITE} h2 bold text="Roadmap" />
           </div>
         </MediaQuery>
       </div>

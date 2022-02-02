@@ -50,7 +50,7 @@ const connection = new anchor.web3.Connection(
 const startDateSeed = parseInt(process.env.REACT_APP_CANDY_START_DATE!, 10);
 const txTimeoutInMilliseconds = 30000;
 
-const WalletButton = () => {
+const ConnectWalletButton = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
 
   const wallets = useMemo(
@@ -83,4 +83,4 @@ const WalletButton = () => {
   );
 };
 
-export default WalletButton;
+export default ConnectWalletButton;

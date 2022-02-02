@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Nav, Navbar, Container, Row, Dropdown } from "react-bootstrap";
+import { useState, useEffect } from "react";
+import { Nav, Navbar, Container } from "react-bootstrap";
 import "./Header.css";
 import logo from "./Img/logo.png";
 import { Image } from "react-bootstrap";
 import { Col } from "react-bootstrap";
-import MediaQuery from "react-responsive";
-import Button from "../Button/Button";
 import Hamburger from "hamburger-react";
 
 function Header() {
@@ -16,7 +14,11 @@ function Header() {
     },
     {
       title: <>Roadmap</>,
-      id: "#about",
+      id: "#roadmap",
+    },
+    {
+      title: <>Faq</>,
+      id: "#faq",
     },
   ];
   const [headerColor, setHeaderColor] = useState(false);

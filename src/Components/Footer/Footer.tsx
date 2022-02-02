@@ -41,8 +41,8 @@ export default function Footer() {
     <>
       <section
         style={{ backgroundColor: `${THEME.LIGHTBLUE}` }}
-        className="mt-5 pt-5">
-        <Container className="pt-4 pb-4">
+        className="mt-2 pt-2">
+        <Container className="pt-4 pb-3">
           <Row className="justify-content-center align-items-center ">
             {socialLinks.map(({ text, icon }) => {
               return (
