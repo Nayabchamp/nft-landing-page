@@ -25,57 +25,71 @@ export default function Faqs({ title, text }: Faqs) {
       ),
     },
     {
-      title: <>What’s an NFT?</>,
+      title: <>What will be the use of the Membership Card sale proceeds?</>,
       text: (
         <>
-          An NFT stands for “Non-fungible token” and is a fancy way of saying
-          it’s a unique, one-of-a-kind digital item that users can buy, own, and
-          trade. Some NFTs main functions are to be digital art and look cool,
-          some offer additional utility. Think of ours like a rare piece of art
-          that can also act as a “members” card which gets you access to
-          members-only perks.
+          The proceeds, net of taxes, will be used to fund DAO operations,
+          including, but not limited to... Chief DAO Officer and operational
+          leadership, including course scouting, financial and acquisition
+          planning Product & engineering DAO infrastructure setup and fees
+          Legal, compliance and accounting Marketing, partnerships and sales
+          Community development Further initiatives as approved by the DAO
         </>
       ),
     },
     {
-      title: <>What’s an NFT?</>,
+      title: (
+        <>What governance rights will LinksDAO Membership Card holders have?</>
+      ),
       text: (
         <>
-          An NFT stands for “Non-fungible token” and is a fancy way of saying
-          it’s a unique, one-of-a-kind digital item that users can buy, own, and
-          trade. Some NFTs main functions are to be digital art and look cool,
-          some offer additional utility. Think of ours like a rare piece of art
-          that can also act as a “members” card which gets you access to
-          members-only perks.
+          The proposal, approval, and execution of non-financial LinksDAO
+          matters, including, but not limited to… Approval of LinksDAO
+          functional operating committees Physical club selection process and
+          approval, as proposed by the relevant operating committee Club rules,
+          including culture, activities, design, and overall vision Club
+          membership rules and admissions policies Marketing, partnerships and
+          sales
         </>
       ),
+    },
+    {
+      title: <>What are the terms of sale?</>,
+      text: <>View the full Terms of Sale.</>,
     },
   ];
   return (
     <>
-      <Container className="pt-5 pb-5  mb-5">
-        <div id="faq">
-          <Text color={THEME.WHITE} bold h2 text="FAQs" />
-        </div>
-        <Row>
-          <Col>
-            {faq.map(({ title, text }) => {
-              return (
-                <>
-                  <Accordion>
-                    <Accordion.Item eventKey="0">
-                      <Accordion.Header>
-                        <Text bold regular text={title} />
-                      </Accordion.Header>
-                      <Accordion.Body>{text}</Accordion.Body>
-                    </Accordion.Item>
-                  </Accordion>
-                </>
-              );
-            })}
-          </Col>
-        </Row>
-      </Container>
+      <section style={{ backgroundColor: "#F6EDD1" }} className=" pb-4 ">
+        <Container className="pt-5 pb-5 ">
+          <div id="faq">
+            <Text color={THEME.BLACK} extraBold h2 text="Faqs" />
+          </div>
+          <Row>
+            <Col>
+              {faq.map(({ title, text }) => {
+                return (
+                  <>
+                    <div className="mt-4">
+                      <Accordion>
+                        <Accordion.Item eventKey="0">
+                          <Accordion.Header>
+                            <Text regular text={title} />
+                          </Accordion.Header>
+                          <Accordion.Body>
+                            {" "}
+                            <Text color={THEME.BLACK} small text={text} />
+                          </Accordion.Body>
+                        </Accordion.Item>
+                      </Accordion>
+                    </div>
+                  </>
+                );
+              })}
+            </Col>
+          </Row>
+        </Container>
+      </section>
     </>
   );
 }

@@ -28,10 +28,10 @@ export default function Text({
         className={className}
         style={{
           fontFamily: extraBold
-            ? "AvertaStd-ExtraBold"
+            ? "UbuntuMono-Bold"
             : bold
-            ? "AvertaStd-Bold"
-            : "AvertaStd-Regular",
+            ? "UbuntuMono-Bold"
+            : "Chococooky",
           fontSize: h1
             ? "64px"
             : h2

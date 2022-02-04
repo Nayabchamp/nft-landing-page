@@ -3,4 +3,6 @@ export const THEME = {
   SECONDARY: "173aff",
   LIGHTBLUE: "#1d263f",
   WHITE: "white",
+  BLACK: "black",
+  GREEN: "#a2ff8d",
 };

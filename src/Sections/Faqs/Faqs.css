@@ -1,31 +1,30 @@
 .accordion-item:last-of-type .accordion-button.collapsed {
-  border-bottom-right-radius: 0px !important;
-  border-bottom-left-radius: 0px !important;
+  border-radius: 8px !important;
   background-color: #131d30 ;
-  color: white;
-  padding: 25px 0px 20px 0px !important;
+  color: rgb(0, 0, 0);
+   padding: 20px !important;
 }
 .accordion-item:first-of-type .accordion-button {
-  border-top-left-radius: 0px !important;
-  border-top-right-radius: 0px !important;
-  background-color: #131d30 ;
-  color: white;
-  padding: 20px 0px 20px 0px !important;
+ 
+  background-color: #ffffff !important;
+  color: rgb(0, 0, 0);
+  padding: 20px !important;
   border-left: 0px solid #aeaeae !important;
   border-right: 0px solid #aeaeae !important;
+  border-radius: 8px !important;
 }
 .accordion-body {
   padding: 1rem 1.25rem;
-  background-color: #131d30 ;
+  background-color: #F6EDD1 !important;
   color: #aeaeae;
-  padding: 20px 0px 20px 0px !important;
+  padding: 20px !important;
   border-left: 0px solid #aeaeae !important;
   border-right: 0px solid #aeaeae !important;
 }
 .accordion-item {
-  background-color: #fff;
+  background-color: #F6EDD1;
   border-top: 0px solid #aeaeae !important;
-  border-bottom: 1px solid #aeaeae !important;
+  border-bottom: 0px solid #aeaeae !important;
   border-left: 0px solid #aeaeae !important;
   border-right: 0px solid #aeaeae !important;
 }
@@ -42,7 +41,7 @@
   transition: transform 0.2s ease-in-out;
 }
 .accordion-button:not(.collapsed)::after {
-  background-image: url(./Img/Line\ 24.png) !important;
+  background-image: url(./Img/Line-24.png) !important;
 }
 .accordion-button:focus {
   z-index: 3;

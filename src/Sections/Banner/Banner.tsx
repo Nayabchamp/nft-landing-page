@@ -3,6 +3,7 @@ import react from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "../../Components/Button/Button";
 import Text from "../../Components/Text/Text";
+import bgImg from "./Img/bluebg.png";
 
 import { THEME } from "../../const";
 import { MintButton } from "../../MintButton";
@@ -20,80 +21,39 @@ export default function Banner({}: Ibanner) {
         style={{
           // paddingTop: "18vw",
           // paddingBottom: "8vw",
-          paddingTop: "12vw",
+          paddingTop: "180px",
           paddingBottom: "8vw",
+          backgroundColor: "rgb(4 208 255 / 15%)",
         }}>
-        <Container
-          style={{
-            backgroundColor: `${THEME.LIGHTBLUE}`,
-            paddingRight: "0px",
-            paddingLeft: "40px",
-          }}
-          className="">
-          <Row className="align-items-center">
-            <Col lg={6}>
-              <motion.div
-                initial={{ x: "-2vw" }}
-                animate={{ x: 0 }}
-                transition={{
-                  // type: "just",
-                  duration: 2,
+        <Container className="">
+          <Row className="text-center">
+            <Col lg={12}>
+              <p
+                style={{
+                  fontSize: "8rem",
+                  fontFamily: "UbuntuMono-Bold",
+
+                  color: `${THEME.BLACK}`,
+                  letterSpacing: "10px",
+                  lineHeight: "60px",
                 }}>
-                <p
-                  style={{
-                    fontSize: "65px",
-                    fontFamily: "AvertaStd-ExtraBold",
-                    lineHeight: "60px",
-                    color: "white",
-                  }}>
-                  The New NFTs Marketplace
-                </p>
-              </motion.div>
-              <motion.div
-                initial={{ x: "2vw" }}
-                animate={{ x: 0 }}
-                transition={{
-                  // type: "just",
-                  duration: 1.5,
-                }}>
-                {" "}
-                <Text
-                  color={THEME.WHITE}
-                  small
-                  bold
-                  text="We spread awareness about the SGDs. Our team of unique specialist are making a world better place."
+                Metacard
+              </p>
+
+              <div className="pt-4">
+                <MintButton
+                  onMint={function (): Promise<void> {
+                    throw new Error("Function not implemented.");
+                  }}
+                  isMinting={false}
                 />
-              </motion.div>
-              <motion.div
-                initial={{ y: "2vw" }}
-                animate={{ y: 0 }}
-                transition={{
-                  // type: "just",
-                  duration: 2,
-                }}>
-                <div className="pt-4">
-                  <MintButton
-                    onMint={function (): Promise<void> {
-                      throw new Error("Function not implemented.");
-                    }}
-                    isMinting={false}
-                  />
-                </div>
-              </motion.div>
+              </div>
             </Col>
-            <Col lg={6} className="text-end">
-              <motion.div
-                initial={{ x: "3vw" }}
-                animate={{ x: 0 }}
-                transition={{
-                  // type: "just",
-                  duration: 2,
-                }}>
-                <img
-                  src={graphic}
-                  style={{ maxWidth: "75%", marginRight: "" }}
-                />
-              </motion.div>
+            <Col lg={12} className=" pt-5">
+              <img
+                src={graphic}
+                style={{ maxWidth: "100%", marginRight: "" }}
+              />
             </Col>
           </Row>
         </Container>

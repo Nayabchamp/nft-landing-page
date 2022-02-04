@@ -42,12 +42,15 @@ function Header() {
           <Col xl={2} lg={2} md={3} sm={6} xs={6} id="zLogo">
             <Navbar.Brand href="#">
               {" "}
-              <Image src={logo} className="logo"></Image>
+              <Image
+                style={{ maxWidth: "100%" }}
+                src={logo}
+                className="logo"></Image>
             </Navbar.Brand>
           </Col>
           <Col xl={10} lg={10} md={9} sm={6} xs={6}>
             <Navbar.Toggle aria-controls="navbarScroll">
-              <Hamburger color="white" />
+              <Hamburger color="black" />
             </Navbar.Toggle>
 
             <Navbar.Collapse id="navbarScroll">
@@ -58,7 +61,7 @@ function Header() {
                       href={id}
                       className="pl-6 ml-5"
                       style={{
-                        fontFamily: "AvertaStd-Bold",
+                        fontFamily: "UbuntuMono-Bold",
                       }}>
                       <p
                         className="link"

@@ -39,15 +39,17 @@ export default function Footer() {
   ];
   return (
     <>
-      <section
-        style={{ backgroundColor: `${THEME.LIGHTBLUE}` }}
-        className="mt-2 pt-2">
+      <section style={{ backgroundColor: "#00ADD5" }} className=" pt-2">
         <Container className="pt-4 pb-3">
           <Row className="justify-content-center align-items-center ">
             {socialLinks.map(({ text, icon }) => {
               return (
                 <>
-                  <Col md="auto" style={{ marginRight: "50px" }}>
+                  <Col
+                    md="auto"
+                    sm="auto"
+                    xs={10}
+                    style={{ marginRight: "50px" }}>
                     <div className="d-flex">
                       {icon}
                       <Text small color={THEME.WHITE} text={text} />
