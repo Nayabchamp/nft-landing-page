@@ -1,11 +1,5 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-
 import "./RoadMap.css";
 import MediaQuery from "react-responsive";
 import { THEME } from "../../const";
@@ -65,81 +59,31 @@ const timelineList = [
 ];
 export default function RoadMap() {
   return (
-    <section style={{ backgroundColor: "#A2FF8D" }}>
-      <div className="   pb-5" id="roadmap">
-        <div className="pt-5 ">
-          <MediaQuery maxWidth={1168}>
-            <div style={{ paddingLeft: "10vh", marginBottom: "-1.5vh" }}>
-              <Text color={THEME.BLACK} h2 bold text="Roadmap" />
-            </div>
-          </MediaQuery>
+    <section style={{ backgroundColor: "#A2FF8D" }} id="roadmap">
+      <Container className="pt-5 pb-5">
+        <div>
+          <Text color={THEME.BLACK} h2 bold text="Roadmap" />
         </div>
-        <Container>
-          <Row className="mrgnBottom">
-            <MediaQuery minWidth={1169}>
-              <Col lg={6}>
-                <Row className="align-items-center">
-                  <Col lg={5}>
-                    <div className="pb-5">
-                      <Text color={THEME.BLACK} h2 bold text="Roadmap" />
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-              <Col lg={6}></Col>
-            </MediaQuery>
-          </Row>
-        </Container>
-        {/* <VerticalTimeline animate={false} className="mb-5 pb-5">
-          {timelineList.map(({ title, text }) => {
-            return (
-              <>
-                <VerticalTimelineElement
-                  position=""
-                  style={{ marginTop: "100px" }}
-                  className="vertical-timeline-element--work"
-                  contentStyle={{ background: "transparent", color: "black" }}
-                  contentArrowStyle={{ borderRight: "7px solid  BLACK" }}
-                  iconStyle={{
-                    background: "BLACK",
-                    color: "BLACK",
-                    marginTop: "0px",
-                  }}>
-                  <div className="pb-2 text-end">
-                    <Text color={THEME.BLACK} regular text={title} />
+        <Row>
+          <Col lg={7} md={12}>
+            {timelineList.map(({ title, text }) => {
+              return (
+                <>
+                  <div className="pt-4">
+                    <Text color={THEME.BLACK} extraBold regular text={title} />
                   </div>
-
                   <Text color={THEME.BLACK} small text={text} />
-                </VerticalTimelineElement>
-              </>
-            );
-          })}
-        </VerticalTimeline> */}
-        <Container>
-          <Row>
-            <Col lg={7}>
-              {timelineList.map(({ title, text }) => {
-                return (
-                  <>
-                    <div className="pt-4">
-                      <Text
-                        color={THEME.BLACK}
-                        extraBold
-                        regular
-                        text={title}
-                      />
-                    </div>
-                    <Text color={THEME.BLACK} small text={text} />
-                  </>
-                );
-              })}
-            </Col>
-            <Col lg={5}>
+                </>
+              );
+            })}
+          </Col>
+          <MediaQuery minWidth={992}>
+            <Col lg={5} md={12}>
               <img style={{ maxWidth: "100%" }} src={roadmap} />
             </Col>
-          </Row>
-        </Container>
-      </div>
+          </MediaQuery>
+        </Row>
+      </Container>
     </section>
   );
 }

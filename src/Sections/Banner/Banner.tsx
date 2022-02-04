@@ -1,20 +1,12 @@
-import { motion } from "framer-motion";
-import react from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Button from "../../Components/Button/Button";
-import Text from "../../Components/Text/Text";
-import bgImg from "./Img/bluebg.png";
 
 import { THEME } from "../../const";
 import { MintButton } from "../../MintButton";
 
-import graphic from "./Img/card.gif";
-interface Ibanner {
-  title?: string;
-  bottomBanner?: boolean;
-  btnText?: string;
-}
-export default function Banner({}: Ibanner) {
+import card from "./Img/card.gif";
+import "./Banner.css";
+
+export default function Banner() {
   return (
     <>
       <section
@@ -29,6 +21,7 @@ export default function Banner({}: Ibanner) {
           <Row className="text-center">
             <Col lg={12}>
               <p
+                className="respBannertext"
                 style={{
                   fontSize: "8rem",
                   fontFamily: "UbuntuMono-Bold",
@@ -50,10 +43,7 @@ export default function Banner({}: Ibanner) {
               </div>
             </Col>
             <Col lg={12} className=" pt-5">
-              <img
-                src={graphic}
-                style={{ maxWidth: "100%", marginRight: "" }}
-              />
+              <img src={card} style={{ maxWidth: "100%", marginRight: "" }} />
             </Col>
           </Row>
         </Container>

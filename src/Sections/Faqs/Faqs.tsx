@@ -1,4 +1,3 @@
-import react from "react";
 import { Accordion, Col, Container, Row } from "react-bootstrap";
 import Text from "../../Components/Text/Text";
 import { THEME } from "../../const";

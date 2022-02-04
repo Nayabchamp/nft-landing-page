@@ -16,7 +16,7 @@ export const CTAButton = styled(Button)`
   font-weight: bold;
   font-family: Chococooky;
   border-radius: 8px !important;
-  box-shadow: -9px 9px 0 #000 !important;
+  box-shadow: -9px 10px 0 #000 !important;
   margin-bottom: 0px !important;
 `; // add your own styles here
 
