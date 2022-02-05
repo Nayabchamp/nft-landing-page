@@ -15,6 +15,7 @@ export default function Footer() {
           style={{ marginRight: "13px" }}
         />
       ),
+      href: "https://mobile.twitter.com/",
     },
     {
       text: "Youtube",
@@ -25,6 +26,7 @@ export default function Footer() {
           style={{ marginRight: "13px" }}
         />
       ),
+      href: "https://www.youtube.com/",
     },
     {
       text: "Discord",
@@ -35,6 +37,7 @@ export default function Footer() {
           style={{ marginRight: "13px" }}
         />
       ),
+      href: "https://discord.com/",
     },
   ];
   return (
@@ -42,7 +45,7 @@ export default function Footer() {
       <section style={{ backgroundColor: "#00ADD5" }} className=" pt-2">
         <Container className="pt-4 pb-3">
           <Row className="justify-content-center align-items-center ">
-            {socialLinks.map(({ text, icon }) => {
+            {socialLinks.map(({ text, icon, href }) => {
               return (
                 <>
                   <Col
@@ -50,10 +53,12 @@ export default function Footer() {
                     sm="auto"
                     xs={10}
                     style={{ marginRight: "50px" }}>
-                    <div className="d-flex">
-                      {icon}
-                      <Text small color={THEME.WHITE} text={text} />
-                    </div>
+                    <a href={href} style={{ textDecoration: "none" }}>
+                      <div className="d-flex">
+                        {icon}
+                        <Text small color={THEME.WHITE} text={text} />
+                      </div>
+                    </a>
                   </Col>
                 </>
               );

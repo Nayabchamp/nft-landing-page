@@ -18,3 +18,24 @@
   src: local("UbuntuMono-Bold"),
     url("./Font/UbuntuMono-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: local("Inter-ExtraBold"),
+    url("./Font/Inter-ExtraBold.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: local("Inter-Bold"),
+    url("./Font/Inter-Bold.otf") format("OpenType");
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: local("Inter-Medium"),
+    url("./Font/Inter-Medium.otf") format("OpenType");
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: local("Inter-Regular"),
+    url("./Font/Inter-Regular.otf") format("OpenType");
+}

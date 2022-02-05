@@ -10,6 +10,7 @@ export default function Banner() {
   return (
     <>
       <section
+        id="home"
         style={{
           // paddingTop: "18vw",
           // paddingBottom: "8vw",
@@ -23,8 +24,8 @@ export default function Banner() {
               <p
                 className="respBannertext"
                 style={{
-                  fontSize: "8rem",
-                  fontFamily: "UbuntuMono-Bold",
+                  fontSize: "6.5rem",
+                  fontFamily: "Inter-ExtraBold",
 
                   color: `${THEME.BLACK}`,
                   letterSpacing: "10px",

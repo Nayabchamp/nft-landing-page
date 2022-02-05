@@ -10,7 +10,7 @@ function Header() {
   let menu = [
     {
       title: <>Home</>,
-      id: "/",
+      id: "#home",
     },
     {
       title: <>Roadmap</>,
@@ -21,26 +21,13 @@ function Header() {
       id: "#faq",
     },
   ];
-  const [headerColor, setHeaderColor] = useState(false);
-
-  const changebackground = () => {
-    window.scrollY > 0 ? setHeaderColor(true) : setHeaderColor(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changebackground);
-  });
 
   return (
     <>
-      <Navbar
-        expand="lg"
-        sticky="top"
-        fixed="top"
-        className={headerColor ? "changeheader shadow" : "defaultheader "}>
-        <Container>
+      <Navbar expand="lg" className="defaultheader pt-5 ">
+        <Container className="pt-3">
           <Col xl={2} lg={2} md={3} sm={6} xs={6} id="zLogo">
-            <Navbar.Brand href="#">
+            <Navbar.Brand href="/">
               {" "}
               <Image
                 style={{ maxWidth: "100%" }}
@@ -61,7 +48,7 @@ function Header() {
                       href={id}
                       className="pl-6 ml-5"
                       style={{
-                        fontFamily: "UbuntuMono-Bold",
+                        fontFamily: "Inter-Bold",
                       }}>
                       <p
                         className="link"

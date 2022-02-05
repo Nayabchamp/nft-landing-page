@@ -70,7 +70,7 @@ export default function RoadMap() {
               return (
                 <>
                   <div className="pt-4">
-                    <Text color={THEME.BLACK} extraBold regular text={title} />
+                    <Text color={THEME.BLACK} bold regular text={title} />
                   </div>
                   <Text color={THEME.BLACK} small text={text} />
                 </>
