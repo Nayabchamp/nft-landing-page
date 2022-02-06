@@ -73,7 +73,15 @@ export default function Faqs({ title, text }: Faqs) {
                       <Accordion>
                         <Accordion.Item eventKey="0">
                           <Accordion.Header>
-                            <Text regular text={title} />
+                            <p
+                              className="pt-2 pb-2"
+                              style={{
+                                margin: "0px",
+                                fontFamily: "Inter-Regular",
+                                fontSize: "20px",
+                              }}>
+                              {title}
+                            </p>
                           </Accordion.Header>
                           <Accordion.Body>
                             {" "}

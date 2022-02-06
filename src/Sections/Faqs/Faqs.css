@@ -2,13 +2,12 @@
   border-radius: 8px !important;
   background-color: #131d30 ;
   color: rgb(0, 0, 0);
-   padding: 20px !important;
 }
 .accordion-item:first-of-type .accordion-button {
  
   background-color: #ffffff !important;
   color: rgb(0, 0, 0);
-  padding: 20px !important;
+
   border-left: 0px solid #aeaeae !important;
   border-right: 0px solid #aeaeae !important;
   border-radius: 8px !important;
