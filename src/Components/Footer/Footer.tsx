@@ -42,7 +42,7 @@ export default function Footer() {
   ];
   return (
     <>
-      <section style={{ backgroundColor: "#00ADD5" }} className=" pt-2 pb-2">
+      <section style={{ backgroundColor: "#00ADD5" }} className=" pt-4 pb-4">
         <Container className="pt-4 pb-3">
           <Row className=" align-items-center justify-content-center ">
             {socialLinks.map(({ text, icon, href }) => {
