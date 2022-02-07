@@ -5,6 +5,7 @@ import { MintButton } from "../../MintButton";
 
 import card from "./Img/card.gif";
 import "./Banner.css";
+import ConnectWalletButton from "../../ConnectWalletButton";
 
 export default function Banner() {
   return (
@@ -35,12 +36,7 @@ export default function Banner() {
               </p>
 
               <div className="pt-4">
-                <MintButton
-                  onMint={function (): Promise<void> {
-                    throw new Error("Function not implemented.");
-                  }}
-                  isMinting={false}
-                />
+                <ConnectWalletButton />
               </div>
             </Col>
             <Col lg={12} className=" pt-5">

@@ -21,14 +21,18 @@ import { MintButton } from './MintButton';
 import { GatewayProvider } from '@civic/solana-gateway-react';
 
 const ConnectButton = styled(WalletDialogButton)`
-  width: 100%;
+  width: 50%;
   height: 60px;
   margin-top: 10px;
   margin-bottom: 5px;
-  background: linear-gradient(180deg, #604ae5 0%, #813eee 100%);
-  color: white;
-  font-size: 16px;
+  background: #626ff3 !important;
+  color: white !important;
+  font-size: 18px;
   font-weight: bold;
+  font-family: Inter-Medium;
+  border-radius: 8px !important;
+  box-shadow: -9px 10px 0 #000 !important;
+  margin-bottom: 0px !important;
 `;
 
 const MintContainer = styled.div``; // add your owns styles here
@@ -46,7 +50,7 @@ const Home = (props: HomeProps) => {
   const [candyMachine, setCandyMachine] = useState<CandyMachineAccount>();
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
-    message: '',
+    message: "",
     severity: undefined,
   });
 
@@ -80,11 +84,11 @@ const Home = (props: HomeProps) => {
         const cndy = await getCandyMachineState(
           anchorWallet,
           props.candyMachineId,
-          props.connection,
+          props.connection
         );
         setCandyMachine(cndy);
       } catch (e) {
-        console.log('There was a problem fetching Candy Machine state');
+        console.log("There was a problem fetching Candy Machine state");
         console.log(e);
       }
     }
@@ -93,7 +97,7 @@ const Home = (props: HomeProps) => {
   const onMint = async () => {
     try {
       setIsUserMinting(true);
-      document.getElementById('#identity')?.click();
+      document.getElementById("#identity")?.click();
       if (wallet.connected && candyMachine?.program && wallet.publicKey) {
         const mintTxId = (
           await mintOneToken(candyMachine, wallet.publicKey)
@@ -105,32 +109,32 @@ const Home = (props: HomeProps) => {
             mintTxId,
             props.txTimeout,
             props.connection,
-            true,
+            true
           );
         }
 
         if (status && !status.err) {
           setAlertState({
             open: true,
-            message: 'Congratulations! Mint succeeded!',
-            severity: 'success',
+            message: "Congratulations! Mint succeeded!",
+            severity: "success",
           });
         } else {
           setAlertState({
             open: true,
-            message: 'Mint failed! Please try again!',
-            severity: 'error',
+            message: "Mint failed! Please try again!",
+            severity: "error",
           });
         }
       }
     } catch (error: any) {
-      let message = error.msg || 'Minting failed! Please try again!';
+      let message = error.msg || "Minting failed! Please try again!";
       if (!error.msg) {
         if (!error.message) {
-          message = 'Transaction Timeout! Please try again.';
-        } else if (error.message.indexOf('0x137')) {
+          message = "Transaction Timeout! Please try again.";
+        } else if (error.message.indexOf("0x137")) {
           message = `SOLD OUT!`;
-        } else if (error.message.indexOf('0x135')) {
+        } else if (error.message.indexOf("0x135")) {
           message = `Insufficient funds to mint. Please fund your wallet.`;
         }
       } else {
@@ -145,7 +149,7 @@ const Home = (props: HomeProps) => {
       setAlertState({
         open: true,
         message,
-        severity: 'error',
+        severity: "error",
       });
     } finally {
       setIsUserMinting(false);
@@ -162,63 +166,55 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
-    <Container style={{ marginTop: 100 }}>
-      <Container maxWidth="xs" style={{ position: 'relative' }}>
-        <Paper
-          style={{ padding: 24, backgroundColor: '#151A1F', borderRadius: 6 }}
-        >
-          {!wallet.connected ? (
-            <ConnectButton>Connect Wallet</ConnectButton>
-          ) : (
-            <>
-              <Header candyMachine={candyMachine} />
-              <MintContainer>
-                {candyMachine?.state.isActive &&
-                candyMachine?.state.gatekeeper &&
-                wallet.publicKey &&
-                wallet.signTransaction ? (
-                  <GatewayProvider
-                    wallet={{
-                      publicKey:
-                        wallet.publicKey ||
-                        new PublicKey(CANDY_MACHINE_PROGRAM),
-                      //@ts-ignore
-                      signTransaction: wallet.signTransaction,
-                    }}
-                    gatekeeperNetwork={
-                      candyMachine?.state?.gatekeeper?.gatekeeperNetwork
-                    }
-                    clusterUrl={rpcUrl}
-                    options={{ autoShowModal: false }}
-                  >
-                    <MintButton
-                      candyMachine={candyMachine}
-                      isMinting={isUserMinting}
-                      onMint={onMint}
-                    />
-                  </GatewayProvider>
-                ) : (
+    <Container>
+      <div>
+        {!wallet.connected ? (
+          <ConnectButton>Connect Wallet</ConnectButton>
+        ) : (
+          <>
+            <Header candyMachine={candyMachine} />
+            <MintContainer>
+              {candyMachine?.state.isActive &&
+              candyMachine?.state.gatekeeper &&
+              wallet.publicKey &&
+              wallet.signTransaction ? (
+                <GatewayProvider
+                  wallet={{
+                    publicKey:
+                      wallet.publicKey || new PublicKey(CANDY_MACHINE_PROGRAM),
+                    //@ts-ignore
+                    signTransaction: wallet.signTransaction,
+                  }}
+                  gatekeeperNetwork={
+                    candyMachine?.state?.gatekeeper?.gatekeeperNetwork
+                  }
+                  clusterUrl={rpcUrl}
+                  options={{ autoShowModal: false }}>
                   <MintButton
                     candyMachine={candyMachine}
                     isMinting={isUserMinting}
                     onMint={onMint}
                   />
-                )}
-              </MintContainer>
-            </>
-          )}
-        </Paper>
-      </Container>
+                </GatewayProvider>
+              ) : (
+                <MintButton
+                  candyMachine={candyMachine}
+                  isMinting={isUserMinting}
+                  onMint={onMint}
+                />
+              )}
+            </MintContainer>
+          </>
+        )}
+      </div>
 
       <Snackbar
         open={alertState.open}
         autoHideDuration={6000}
-        onClose={() => setAlertState({ ...alertState, open: false })}
-      >
+        onClose={() => setAlertState({ ...alertState, open: false })}>
         <Alert
           onClose={() => setAlertState({ ...alertState, open: false })}
-          severity={alertState.severity}
-        >
+          severity={alertState.severity}>
           {alertState.message}
         </Alert>
       </Snackbar>

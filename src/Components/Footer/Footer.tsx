@@ -11,7 +11,7 @@ export default function Footer() {
       icon: (
         <AiOutlineTwitter
           color={THEME.WHITE}
-          size={34}
+          size={60}
           style={{ marginRight: "13px" }}
         />
       ),
@@ -22,7 +22,7 @@ export default function Footer() {
       icon: (
         <AiFillYoutube
           color={THEME.WHITE}
-          size={34}
+          size={60}
           style={{ marginRight: "13px" }}
         />
       ),
@@ -33,7 +33,7 @@ export default function Footer() {
       icon: (
         <SiDiscord
           color={THEME.WHITE}
-          size={34}
+          size={60}
           style={{ marginRight: "13px" }}
         />
       ),
@@ -42,21 +42,22 @@ export default function Footer() {
   ];
   return (
     <>
-      <section style={{ backgroundColor: "#00ADD5" }} className=" pt-2">
+      <section style={{ backgroundColor: "#00ADD5" }} className=" pt-2 pb-2">
         <Container className="pt-4 pb-3">
-          <Row className="justify-content-center align-items-center ">
+          <Row className=" align-items-center justify-content-center ">
             {socialLinks.map(({ text, icon, href }) => {
               return (
                 <>
-                  <Col
-                    md="auto"
-                    sm="auto"
-                    xs={10}
-                    style={{ marginRight: "50px" }}>
+                  <Col lg={3} md={4} sm={4}>
                     <a href={href} style={{ textDecoration: "none" }}>
-                      <div className="d-flex">
+                      <div className="d-flex text-center justify-content-center">
                         {icon}
-                        <Text small color={THEME.WHITE} text={text} />
+                        <Text
+                          className="pt-3"
+                          small
+                          color={THEME.WHITE}
+                          text={text}
+                        />
                       </div>
                     </a>
                   </Col>
