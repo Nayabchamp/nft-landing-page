@@ -21,17 +21,17 @@ import { MintButton } from './MintButton';
 import { GatewayProvider } from '@civic/solana-gateway-react';
 
 const ConnectButton = styled(WalletDialogButton)`
-  width: 50%;
+  width: 70%;
   height: 60px;
   margin-top: 10px;
   margin-bottom: 5px;
-  background: #626ff3 !important;
-  color: white !important;
+  background: #e3c847 !important;
+  color: black !important;
   font-size: 18px;
   font-weight: bold;
   font-family: Inter-Medium;
   border-radius: 8px !important;
-  box-shadow: -9px 10px 0 #000 !important;
+  box-shadow: -9px 10px 0 white !important;
   margin-bottom: 0px !important;
 `;
 

@@ -37,7 +37,7 @@ function Header() {
           </Col>
           <Col xl={10} lg={10} md={9} sm={6} xs={6}>
             <Navbar.Toggle aria-controls="navbarScroll">
-              <Hamburger color="black" />
+              <Hamburger color="white" />
             </Navbar.Toggle>
 
             <Navbar.Collapse id="navbarScroll">

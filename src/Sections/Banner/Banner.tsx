@@ -1,7 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 
 import { THEME } from "../../const";
-import { MintButton } from "../../MintButton";
 
 import card from "./Img/card.gif";
 import "./Banner.css";
@@ -12,35 +11,33 @@ export default function Banner() {
     <>
       <section
         id="home"
+        className="responsiveBanner"
         style={{
-          // paddingTop: "18vw",
-          // paddingBottom: "8vw",
-          paddingTop: "180px",
-          paddingBottom: "8vw",
-          backgroundColor: "rgb(4 208 255 / 15%)",
+          backgroundColor: "black",
         }}>
-        <Container className="">
-          <Row className="text-center">
-            <Col lg={12}>
-              <p
+        <Container>
+          <Row className="align-items-center">
+            <Col lg={7} className="resptextalign">
+              <h1
                 className="respBannertext"
                 style={{
-                  fontSize: "6.5rem",
+                  fontSize: "95px",
                   fontFamily: "Inter-ExtraBold",
 
-                  color: `${THEME.BLACK}`,
+                  color: `${THEME.WHITE}`,
                   letterSpacing: "10px",
-                  lineHeight: "60px",
                 }}>
-                Metacard
-              </p>
+                A NEW ERA IN GOLF
+              </h1>
 
               <div className="pt-4">
                 <ConnectWalletButton />
               </div>
             </Col>
-            <Col lg={12} className=" pt-5">
-              <img src={card} style={{ maxWidth: "100%", marginRight: "" }} />
+            <Col lg={5} className=" pt-5  ">
+              <div className="cardAlign">
+                <img style={{ maxWidth: "90%" }} src={card} />
+              </div>
             </Col>
           </Row>
         </Container>

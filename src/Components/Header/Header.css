@@ -19,7 +19,7 @@
 
 
 .defaultheader .link {
-  color: #000000 !important;
+  color: white !important;
   -webkit-transition: 0.5s !important;
   transition: 0.5s !important;
 }
@@ -43,7 +43,7 @@
 @media (max-width: 989px) {
   .navbar-nav {
     position: absolute;
-    background-color: #ffffff;
+    background-color: black;
 
     padding-top: 120px;
     padding-bottom: 20px;

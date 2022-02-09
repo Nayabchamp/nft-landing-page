@@ -59,10 +59,10 @@ export default function Faqs({ title, text }: Faqs) {
   ];
   return (
     <>
-      <section style={{ backgroundColor: "#F6EDD1" }} className=" pb-4 ">
+      <section style={{ backgroundColor: "black" }} className=" pb-4 ">
         <Container className="pt-5 pb-5 ">
           <div id="faq">
-            <Text color={THEME.BLACK} extraBold h2 text="Faqs" />
+            <Text color={THEME.WHITE} extraBold h2 text="Faqs" />
           </div>
           <Row>
             <Col>
@@ -85,7 +85,7 @@ export default function Faqs({ title, text }: Faqs) {
                           </Accordion.Header>
                           <Accordion.Body>
                             {" "}
-                            <Text color={THEME.BLACK} small text={text} />
+                            <Text color={THEME.WHITE} small text={text} />
                           </Accordion.Body>
                         </Accordion.Item>
                       </Accordion>

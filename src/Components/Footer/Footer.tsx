@@ -10,7 +10,7 @@ export default function Footer() {
       text: "Twitter",
       icon: (
         <AiOutlineTwitter
-          color={THEME.WHITE}
+          color={THEME.BLACK}
           size={60}
           style={{ marginRight: "13px" }}
         />
@@ -21,7 +21,7 @@ export default function Footer() {
       text: "Youtube",
       icon: (
         <AiFillYoutube
-          color={THEME.WHITE}
+          color={THEME.BLACK}
           size={60}
           style={{ marginRight: "13px" }}
         />
@@ -32,7 +32,7 @@ export default function Footer() {
       text: "Discord",
       icon: (
         <SiDiscord
-          color={THEME.WHITE}
+          color={THEME.BLACK}
           size={60}
           style={{ marginRight: "13px" }}
         />
@@ -42,7 +42,9 @@ export default function Footer() {
   ];
   return (
     <>
-      <section style={{ backgroundColor: "#00ADD5" }} className=" pt-4 pb-4">
+      <section
+        style={{ backgroundColor: `${THEME.GOLD}` }}
+        className=" pt-4 pb-4">
         <Container className="pt-4 pb-3">
           <Row className=" align-items-center justify-content-center ">
             {socialLinks.map(({ text, icon, href }) => {
@@ -55,7 +57,7 @@ export default function Footer() {
                         <Text
                           className="pt-3"
                           small
-                          color={THEME.WHITE}
+                          color={THEME.BLACK}
                           text={text}
                         />
                       </div>

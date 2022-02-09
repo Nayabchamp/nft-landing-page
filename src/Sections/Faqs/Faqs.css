@@ -1,24 +1,21 @@
 .accordion-item:last-of-type .accordion-button.collapsed {
-  border-radius: 8px !important;
+  border-radius: 5px !important;
   background-color: #131d30 ;
   color: rgb(0, 0, 0);
 }
 .accordion-item:first-of-type .accordion-button {
  
-  background-color: #ffffff !important;
+  background-color: #e3c847 !important;
   color: rgb(0, 0, 0);
 
   border-left: 0px solid #aeaeae !important;
   border-right: 0px solid #aeaeae !important;
-  border-radius: 8px !important;
+  border-radius: 0px !important;
 }
 .accordion-body {
   padding: 1rem 1.25rem;
-  background-color: #F6EDD1 !important;
-  color: #aeaeae;
+  background-color: black !important;
   padding: 20px !important;
-  border-left: 0px solid #aeaeae !important;
-  border-right: 0px solid #aeaeae !important;
 }
 .accordion-item {
   background-color: #F6EDD1;

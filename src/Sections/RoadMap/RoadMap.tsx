@@ -59,7 +59,7 @@ const timelineList = [
 ];
 export default function RoadMap() {
   return (
-    <section style={{ backgroundColor: "#A2FF8D" }} id="roadmap">
+    <section style={{ backgroundColor: "#e3c847" }} id="roadmap">
       <Container className="pt-5 pb-5">
         <div>
           <Text color={THEME.BLACK} h2 bold text="Roadmap" />

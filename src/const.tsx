@@ -5,4 +5,5 @@ export const THEME = {
   WHITE: "white",
   BLACK: "black",
   GREEN: "#a2ff8d",
+  GOLD: "#e3c847",
 };
