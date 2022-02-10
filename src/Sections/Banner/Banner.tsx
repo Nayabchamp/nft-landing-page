@@ -25,7 +25,6 @@ export default function Banner() {
                   fontFamily: "Inter-ExtraBold",
 
                   color: `${THEME.WHITE}`,
-                  letterSpacing: "10px",
                 }}>
                 A NEW ERA IN GOLF
               </h1>
